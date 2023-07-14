@@ -1,11 +1,9 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(207, 65%, 65%);
   --title-color: hsl(0, 100%, 20%);
@@ -14,8 +12,6 @@
   --body-color: hsl(207, 4%, 99%);
   --container-color: hsl(359, 62%, 98%);
 
-  /* Change the first number */
-  /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
   --gradient-color: linear-gradient(180deg,
       hsla(207, 48%, 72%, 0),
       hsla(207, 65%, 65%, 1));
@@ -43,7 +39,6 @@
   --z-fixed: 100;
 }
 
-/* Responsive typography */
 @media screen and (min-width: 1024px) {
   :root {
     --biggest-font-size: 3rem;
@@ -57,7 +52,6 @@
   }
 }
 
-/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -98,24 +92,6 @@ img {
   height: auto;
 }
 
-/*=============== THEME ===============*/
-
-
-/*========== Variables Dark theme ==========*/
-body.dark-theme {
-  --title-color: hsl(207, 4%, 95%);
-  --text-color: hsl(207, 4%, 65%);
-  --body-color: hsl(207, 4%, 10%);
-  --container-color: hsl(207, 4%, 12%);
-}
-
-/*========== 
-    Color changes in some parts of 
-    the website, in light theme
-==========*/
-
-
-/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
   margin-inline: 1.5rem;
@@ -155,10 +131,8 @@ body.dark-theme {
 
 .main {
   overflow: hidden;
-  /* For animation */
 }
 
-/*=============== HEADER & NAV ===============*/
 .header {
   width: 100%;
   position: fixed;
@@ -241,19 +215,15 @@ body.dark-theme {
   cursor: pointer;
 }
 
-
-/* Show menu */
 .show-menu {
   bottom: 2rem;
 }
-
-/* Active link */
 
 .active-link {
   color: var(--title-color);
 }
 
-/*=============== HOME ===============*/
+
 .home__container {
   row-gap: 4rem;
   padding-top: 2rem;
@@ -343,8 +313,6 @@ body.dark-theme {
   font-weight: var(--font-semi-bold);
 }
 
-
-/*=============== ABOUT ===============*/
 .about {
   position: relative;
 }
@@ -397,7 +365,7 @@ body.dark-theme {
   color: var(--text-color-light);
 }
 
-/*=============== SKILLS ===============*/
+
 .skills__container {
   row-gap: 3.5rem;
 }
@@ -457,7 +425,6 @@ body.dark-theme {
   color: var(--text-color-light);
 }
 
-/* Animation skills */
 
 .skills__blob:hover img {
   animation: bounce-skills .6s;
@@ -485,7 +452,7 @@ body.dark-theme {
   }
 }
 
-/*=============== SERVICES ===============*/
+
 .services__container {
   row-gap: 2.5rem;
   justify-content: center;
@@ -537,16 +504,19 @@ body.dark-theme {
   opacity: 1;
 }
 
-/*=============== Gallery ===============*/
+
 .gallery__container {
-  width: 350px;
+  width: 285px;
+  height: 555px;
   overflow: initial;
 }
+
 .gallery__container .swiper {
-  width: auto;
+  width: 100%;
   padding-top: 50%;
-  padding-bottom: 50%;
+  padding-bottom: 25%;
 }
+
 .gallery__content {
   display: grid;
   justify-content: center;
@@ -554,7 +524,7 @@ body.dark-theme {
 
 .gallery__video {
   width: 100%;
-  height: 500px;
+  height: 525px;
   border-radius: .75rem;
   margin-bottom: 1.25rem;
 }
@@ -572,7 +542,7 @@ body.dark-theme {
 }
 
 
-/*=============== CONTACT ===============*/
+
 .contact__container {
   row-gap: 3.5rem;
 }
@@ -712,7 +682,7 @@ body.dark-theme {
   color: hsl(207, 56%, 45%);
 }
 
-/*=============== FOOTER ===============*/
+
 .footer__container {
   padding: 3rem 0 7rem;
   text-align: center;
@@ -764,7 +734,7 @@ body.dark-theme {
   color: var(--text-color-light);
 }
 
-/*=============== SCROLL BAR ===============*/
+
 ::-webkit-scrollbar {
   width: .6rem;
   border-radius: .5rem;
@@ -780,33 +750,7 @@ body.dark-theme {
   background-color: hsl(207, 4%, 55%);
 }
 
-/*=============== SCROLL UP ===============*/
-.scrollup {
-  position: fixed;
-  right: 1rem;
-  bottom: -30%;
-  background-color: var(--body-color);
-  box-shadow: 0 4px 12px hsl(207, 24%, 35%, .15);
-  display: inline-flex;
-  padding: .35rem;
-  border-radius: .25rem;
-  font-size: 1.1rem;
-  color: var(--z-tooltip-color);
-  z-index: var(--z-tooltip);
-  transition: bottom .3s transform .3s;
-}
-
-.scrollup:hover {
-  transform: translateY(-.25rem);
-}
-
-/* Show Scroll Up*/
-.show-scroll {
-  bottom: 7.5rem;
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+/* small devices */
 @media screen and (max-width: 425px) {
   .container {
     margin-inline: 1rem;
@@ -825,7 +769,7 @@ body.dark-theme {
   }
 }
 
-/* For medium devices */
+/* medium devices */
 @media screen and (min-width: 425px) {
 
   .nav,
@@ -842,7 +786,7 @@ body.dark-theme {
   }
 }
 
-/* For large devices */
+/* large devices */
 
 @media screen and (min-width: 767px) {
 
